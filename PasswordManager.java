@@ -14,7 +14,6 @@ public class PasswordManager
 class Menu
 {
 	public static String Password = "Password";
-
 	static Scanner sc = new Scanner(System.in);
 
 	public static void passwordEnter(){
@@ -28,6 +27,7 @@ class Menu
 			if(enteredPassword.equals(Password))
 				{
 					System.out.println("Correct Password");
+                    enterAction();
 					break;
 				}
 			else{
@@ -35,5 +35,27 @@ class Menu
 			}
 		}
 	}
+    public static void enterAction()
+    {
+        System.out.println("----------------------------------------Enter action to carry out----------------------------------------");
+        System.out.println("1 - View All Passwords");
+        System.out.println("2 - Enter New Password");
+        System.out.println("3 - Search For Password");
+        System.out.println("4 - Edit Password");
+        System.out.println("5 - Delete Password");
+        System.out.println("---------------------------------------------------------------------------------------------------------");
+
+        int input = sc.nextInt();
+
+        switch(input)
+        {
+            case 1:
+                System.out.println("Viewing Passwords");
+                break;
+            case 2:
+                System.out.println("Enter Password Domain");
+                break;
+        }
+    }
 }
 
